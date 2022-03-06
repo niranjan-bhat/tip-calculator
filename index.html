@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Frontend Mentor | Tip calculator app</title>
+
+
+</head>
+
+<body>
+    <main>
+        <div class="main-title">
+            <p>SPLI</p>
+            <p>TTER</p>
+        </div>
+        <div class="flex-container">
+            <div class="input-container">
+                <div class="bill-container">
+                    <p class="title grey">Bill</p>
+                    <div class="input-with-icon-div">
+                        <img src="images\icon-dollar.svg" alt="">
+                        <input class="text-input bill" id="bill-amount" type="number" placeholder="0">
+                    </div>
+                </div>
+                <div class="percentage-container">
+                    <p class="title grey">Select Tip %</p>
+                    <div class="buttons-grid">
+                        <div class="btn enabled" data-tipPercentage="5">5%</div>
+                        <div class="btn enabled" data-tipPercentage="10">10%</div>
+                        <div class="btn enabled" data-tipPercentage="15">15%</div>
+                        <div class="btn enabled" data-tipPercentage="25">25%</div>
+                        <div class="btn enabled" data-tipPercentage="50">50%</div>
+                        <div class="custom-container">
+                            <input type="number" class="custom-input" placeholder="Custom">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="people-container">
+                    <div class="name-container">
+                        <p class="title grey">Number of People </p>
+                        <p class="title red error">Can't be zero </p>
+                    </div>
+                    <div class="input-with-icon-div no-of-people-input">
+                        <img src="images\icon-person.svg" alt="">
+                        <input class="text-input bill" id="noOfPeople" type="number" placeholder="0">
+                    </div>
+                </div>
+            </div>
+            <div class="output-div">
+                <div class="text-container">
+                    <div class="tip-amount-container">
+                        <div class="tip-amount-title">
+                            <p class="title white">Tip Amount</p>
+                            <p class="sub-title grey">/ person</p>
+                        </div>
+                        <div class="tip-per-person">$0</div>
+                    </div>
+                    <div class="total-tip-container">
+                        <div class="tip-title-container">
+                            <p class="title white">Total Amount</p>
+                            <p class="sub-title grey">/ person</p>
+                        </div>
+                        <div class="tip-total">$0</div>
+                    </div>
+                </div>
+                <div class="reset-btn">
+                    <p>RESET</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+<script src="script.js"></script>
+
+</html>

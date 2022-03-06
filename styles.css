@@ -1,0 +1,255 @@
+:root {
+    --font-small: 1em;
+    --font-family: 'Space Mono', monospace;
+    --border-radius: 0.25em;
+}
+
+::after,
+::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+body {
+    font-family: var(--font-family);
+    min-height: 100vh;
+    background-color: hsl(185, 41%, 84%);
+    display: grid;
+    place-items: center;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4em;
+}
+
+.main-title>p {
+    letter-spacing: 0.5em;
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: 25em 25em;
+    grid-template-rows: 22em;
+    background-color: white;
+    border-radius: 1em;
+}
+
+.input-container {
+    margin: 2em;
+}
+
+.text-input {
+    font-size: var(--font-small);
+    font-family: var(--font-family);
+    font-weight: bold;
+    text-align: right;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-radius: var(--border-radius);
+    padding: 0.5em 1em;
+    display: table;
+    width: 100%;
+}
+
+.text-input :active {
+    border: none;
+    outline: none;
+}
+
+.input-with-icon-div {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(189, 41%, 97%);
+    align-items: center;
+}
+
+.input-with-icon-div>img {
+    width: 1.7em;
+    padding-left: 1em;
+}
+
+.bill-input {
+    background-image: url(images\icon-dollar.svg);
+    background-repeat: no-repeat;
+    padding-left: 1em;
+    color: hsl(183, 100%, 15%);
+}
+
+.title {
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.grey {
+    color: hsl(186, 14%, 43%);
+}
+
+.white {
+    color: white;
+}
+
+.red {
+    color: red;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.5em
+}
+
+.btn {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: var(--border-radius);
+    color: white;
+    font-weight: bold;
+    font-family: var(--font-family);
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+}
+
+.enabled {
+    background-color: hsl(183, 100%, 15%);
+}
+
+.disabled {
+    background-color: hsl(189, 41%, 97%);
+}
+
+.percentage-container {
+    margin-top: 2em;
+}
+
+.people-container {
+    margin-top: 2em;
+}
+
+.output-div {
+    background-color: hsl(183, 100%, 15%);
+    display: flex;
+    margin: 1.5em;
+    border-radius: 1em;
+    padding: 2em;
+    width: auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tip-amount-container,
+.total-tip-container,
+.name-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.total-tip-container {
+    margin-top: 2em;
+}
+
+.tip-per-person,
+.tip-total {
+    font-size: 1.5em;
+    color: hsl(172, 67%, 45%);
+    font-weight: bold;
+}
+
+.reset-btn {
+    background-color: hsl(172, 67%, 45%);
+    display: flex;
+    justify-content: center;
+    border-radius: 0.3em;
+}
+
+.reset-btn>p {
+    font-weight: bold;
+    padding: 0.5em;
+    color: hsl(183, 100%, 15%);
+}
+
+.btn:hover,
+.active,
+.reset-btn:hover {
+    background-color: hsl(185, 41%, 84%);
+    cursor: pointer;
+    color: hsl(183, 100%, 15%);
+}
+
+.custom-input {
+    display: table;
+    width: 100%;
+    height: auto;
+    border: 2px solid transparent;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0.3em 0.5em;
+    font-family: var(--font-family);
+    font-weight: bold;
+    text-align: right;
+    background-color: hsl(189, 41%, 97%);
+    outline: none;
+}
+
+.custom-input:focus {
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
+.custom-input::placeholder {
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 650px) {
+    .flex-container {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: auto;
+        background-color: white;
+        border-radius: 1em;
+        margin: auto;
+        width: 100%;
+    }
+    .buttons-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0.5em
+    }
+}
+
+.error {
+    display: none;
+}
